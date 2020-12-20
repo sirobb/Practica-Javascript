@@ -20,3 +20,4 @@ class Auto extends Vehiculo{
 const auto = new Vehiculo(4, 4);
 
 auto.Saludar();
+console.log("hola");
