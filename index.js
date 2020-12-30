@@ -1,23 +1,26 @@
-class Vehiculo {
-    constructor(NumPuertas, CapPasajeros,km) {
-        this.NumPuertas = NumPuertas;
-        this.CapPasajeros = CapPasajeros;
-        this.km = 0;
-    }
+const GrupoA = ["Chile", "Brasil"]
+const GrupoB = ["Argentina", "Mexico"]
+const GrupoC = ["Uruguay", "Venezuela"]
+const GrupoD = ["Camerun", "Egipto"]
+const GrupoE = ["Etiopia", "Inglaterra"]
+const GrupoF = ["España", "Holanda"]
+const GrupoG = ["Italia", "Francia"]
+const GrupoH = ["Portugal", "Jamaica"]
+const Eliminatorias = [GrupoA, GrupoB, GrupoC, GrupoD, GrupoE, GrupoF, GrupoG, GrupoH];
+const Numero1 = Math.floor(Math.random() * 10);
+const Numero2 = Math.floor(Math.random() * 10);
 
-    Encender() {
-        console.log(`Vehiculo encendido`);
+function Partido(equipo1, equipo2) {
+    equipo1 = GrupoA[0] + Numero1;
+    equipo2 = GrupoB[0] + Numero2;
+    console.log(`${equipo1}-${equipo2}`)
+    if (equipo1 > equipo2) {
+        console.log(`Gana ${equipo1}`)
     }
-
-    Saludar() {
-        console.log(`Hola!, soy un vehiculo, tengo ${this.NumPuertas} puertas y caben ${this.CapPasajeros} pasajeros ${this.km}`)
+    else if(equipo1 < equipo2) {
+        console.log(`Gana ${equipo2}`)
     }
 }
-
-class Auto extends Vehiculo{
-
-}
-const auto = new Vehiculo(4, 4);
-
-auto.Saludar();
-console.log("hola");
+console.log(`Equipos Eliminatorias => ${Eliminatorias}`);
+console.log("--OCTAVOS DE FINAL!!---")
+Partido()
