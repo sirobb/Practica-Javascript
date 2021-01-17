@@ -70,14 +70,14 @@ function jugarsemifinal(equipo1, score1, equipo2, score2) {
 }
 function jugartercerYcuarto(equipo1, score1, equipo2, score2) {
 
-    if (score1 > score2) {
+    if (score1 > score2 ) {
 
         return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1}`)
-    } else if (score2 > score1) {
+    } else if (score2 > score1 ) {
 
 
         return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo2}`)
-    } else if (score1 === score2) {
+    } else if (score1 === score2 ) {
 
 
         return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1}`)
@@ -87,17 +87,19 @@ function jugarfinal(equipo1, score1, equipo2, score2) {
 
     if (score1 > score2) {
 
-        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1}`)
+        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1} GANA EL MUNDIAL!!!`)
     } else if (score2 > score1) {
 
 
-        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo2}`)
+        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo2} GANA EL MUNDIAL!!!`)
     } else if (score1 === score2) {
 
 
-        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1}`)
+        return console.log(`${equipo1} ${score1} vs ${equipo2} ${score2} => ${equipo1} GANA EL MUNDIAL!!!`)
     }
 }
+
+
 console.log(`================================================`)
 console.log(`======COMIENZO DE LA FASE DE ELIMINATORIAS======`)
 console.log(`================================================`)
@@ -124,14 +126,12 @@ jugar4tos(cuartosDeFinal[6], generaScore1(), cuartosDeFinal[7], generaScore2())
 console.log(`===SEMIFINALES===`)
 jugarsemifinal(semiFinales[0], generaScore1(), semiFinales[1], generaScore2())
 jugarsemifinal(semiFinales[2], generaScore1(), semiFinales[3], generaScore2())
-console.log(`===TERCER Y CUARTO PUESTO===`)
-jugarfinal(semiFinales[0], generaScore1(), semiFinales[3], generaScore2())
+// console.log(`===TERCER Y CUARTO PUESTO===`)
+// jugartercerYcuarto(semiFinales[1], generaScore1(), semiFinales[3], generaScore2())
 console.log(`===FINAL===`)
 jugarfinal(final[0], generaScore1(), final[1], generaScore2())
 
-// final.forEach(i => {
-//     console.log(i)
-// });
+
 
 
 
